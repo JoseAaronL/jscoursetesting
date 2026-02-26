@@ -37,8 +37,10 @@ function clearCompletedTasks() {
         }
 
 function clearAllTasks() {
-    tasks = [];      // vacía completamente el array
-    displayTasks();  // vuelve a dibujar (quedará vacío)
+    if (confirm("¿Seguro que deseas borrar todas las tareas?")) {
+        tasks = [];
+        displayTasks();
+    }
 }
 
         addTaskBtn.addEventListener("click", addTask);
